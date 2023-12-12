@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<style>
+
+  .formFileMultiple
+  {
+  color: bg-danger;
+  font-weight;
+  font-size: 20px;
+  }
+
+
+  .black-button {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border: 3px solid red;
+  width: 200px;
+  border-radius: 10px;
+  font-size: 21px;
+}
+
+
+
+</style>
+
+<body>
+<h1><b>Add vehicles</b></h1>
+
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+
+<div class="mb-3">
+  <label for="formFile" class="form-label">Title</label>
+  <input class="form-control" type="text" id="formFile" name="T">
+</div>
+
+<div class="mb-3">
+  <label for="formFileMultiple" class="form-label">desc</label>
+  <input class="form-control" type="text" id="formFileMultiple"  name="A">
+</div>
+
+<div class="mb-8">
+  <label for="formFileMultiple" class="form-label">image</label>
+  <input class="form-control" type="file" id="formFileMultiple"  name="i">
+</div>
+
+
+  <input type="submit" value="Submit">
+
+</form>
+
+
+</body>
+</html>
